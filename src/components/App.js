@@ -36,7 +36,7 @@ const App=()=> {
   },[])
 
   useEffect(()=>{
-    fetch("http://localhost:4000/movies")
+    fetch("http://localhost:8000/movies")
     .then((res)=>{
       return res.json()
     })
@@ -49,7 +49,7 @@ const App=()=> {
   },[])
 
   useEffect(()=>{
-    fetch("http://localhost:5000/TVs")
+    fetch("http://localhost:8000/TVs")
     .then((res)=>{
       return res.json()
     })
