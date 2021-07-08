@@ -23,7 +23,7 @@ const App=()=> {
   const [tvs, setTVs] = useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:8000/banners")
+    fetch("https://fake-server-for-movies-app.herokuapp.com/banners")
     .then((res)=>{
       return res.json()
     })
@@ -36,7 +36,7 @@ const App=()=> {
   },[])
 
   useEffect(()=>{
-    fetch("http://localhost:8000/movies")
+    fetch("https://fake-server-for-movies-app.herokuapp.com/movies")
     .then((res)=>{
       return res.json()
     })
@@ -49,7 +49,7 @@ const App=()=> {
   },[])
 
   useEffect(()=>{
-    fetch("http://localhost:8000/TVs")
+    fetch("https://fake-server-for-movies-app.herokuapp.com/TVs")
     .then((res)=>{
       return res.json()
     })
