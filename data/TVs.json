@@ -1,0 +1,126 @@
+{
+    "TVs":
+    [
+          {
+            "id": 1, 
+            "title":"The Mandalorian",
+            "episode":16,
+            "synopsis":"The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
+            "small_poster":"https://upload.wikimedia.org/wikipedia/zh/e/e6/The_Mandalorian_Poster.jpg",
+            "large_poster":"https://www.micechat.com/wp-content/uploads/2020/01/the-mandalorian-banner-1.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 2, 
+            "title":"Loki",
+            "episode": 6,
+            "synopsis":"The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”",
+            "small_poster":"https://imgc.allpostersimages.com/img/posters/marvel-loki-teaser_u-L-F9LZTO0.jpg?h=900&p=0&w=900",
+            "large_poster":"https://i.ytimg.com/vi/l57WKbi2Ebc/maxresdefault.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 3, 
+            "title":"Falcon and Winter Soldier",
+            "episode": 6,
+            "synopsis":"Following the events of 'Avengers: Endgame,' Sam Wilson/Falcon and Bucky Barnes/Winter Soldier team up in a global adventure that tests their abilities -- and their patience.",
+            "small_poster":"https://upload.wikimedia.org/wikipedia/zh/thumb/9/9a/The_Falcon_and_the_Winter_Soldier_poster.jpg/220px-The_Falcon_and_the_Winter_Soldier_poster.jpg",
+            "large_poster":"https://www.indiewire.com/wp-content/uploads/2021/03/falcoln-winter-soldier.png?w=780",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 4, 
+            "title":"Sweet Tooth",
+            "episode": 8,
+            "synopsis":"A boy who is half human and half deer survives in a post-apocalyptic world with other hybrids.",
+            "small_poster":"https://i2.wp.com/waynesan.com/wp-content/uploads/2021/06/sweet-tooth-netflix-1.jpg?resize=474%2C703&ssl=1",
+            "large_poster":"https://www.escapistmagazine.com/v2/wp-content/uploads/2021/06/itfsweettooth-702x395.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 5, 
+            "title":"Lupin",
+            "episode": 11,
+            "synopsis":"Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+            "small_poster":"https://deadline.com/wp-content/uploads/2021/05/Lupin_P2_Main_Vertical_RGB_Pre_NoDate_EN-UK.jpg?w=1024",
+            "large_poster":"https://cdn.mos.cms.futurecdn.net/L2HUAnLtkPq8rWApYoFe88.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 6, 
+            "title":"WandaVision",
+            "episode": 9,
+            "synopsis":"Blends the style of classic sitcoms with the MCU, in which Wanda Maximoff and Vision - two super-powered beings living their ideal suburban lives - begin to suspect that everything is not as it seems.",
+            "small_poster":"https://tvline.com/wp-content/uploads/2020/09/wandavision-poster.jpg",
+            "large_poster":"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/8CB87D9EC43361F6FD2F3513F9DEF0733CB72E383CE0D89E6174C96851F9D575/scale?width=1200&aspectRatio=1.78&format=jpeg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 7, 
+            "title":"Rick and Morty",
+            "episode": 10,
+            "synopsis":"An animated series that follows the exploits of a super scientist and his not-so-bright grandson.",
+            "small_poster":"https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg",
+            "large_poster":"https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190924075650-rick-and-morty-cartoon.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 8, 
+            "title":"Game Of Thrones",
+            "episode": 10,
+            "synopsis":"Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
+            "small_poster":"https://pyxis.nymag.com/v1/imgs/492/9c2/7a5bb5e64125b18b7a9ae7f3739487e525-got-poster-s6-1.2x.rdeep-vertical.w460.jpg",
+            "large_poster":"https://cdn.mos.cms.futurecdn.net/hBnAKidjLXGjkEateNqvJh.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 9, 
+            "title":"The Queen's Gambit",
+            "episode": 7,
+            "synopsis":"Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price.",
+            "small_poster":"https://upload.wikimedia.org/wikipedia/en/1/12/The_Queen%27s_Gambit_%28miniseries%29.png",
+            "large_poster":"https://deadline.com/wp-content/uploads/2020/11/The-Queens-Gambit.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 10, 
+            "title":"Lucifer",
+            "episode": 16,
+            "synopsis":"Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+            "small_poster":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b896a83f-0121-45b5-b482-72d60cc01377/daow6qc-30f4bac8-0fdf-4b96-855d-ac2901c9f35a.jpg/v1/fill/w_1024,h_1517,q_75,strp/lucifer_poster_by_letydb_daow6qc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUxNyIsInBhdGgiOiJcL2ZcL2I4OTZhODNmLTAxMjEtNDViNS1iNDgyLTcyZDYwY2MwMTM3N1wvZGFvdzZxYy0zMGY0YmFjOC0wZmRmLTRiOTYtODU1ZC1hYzI5MDFjOWYzNWEuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ._k43nHBrH83LGbksnzcHccIift2mQnW7p41zAorF3sk",
+            "large_poster":"https://wallpapercave.com/wp/wp7272089.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 11, 
+            "title":"Katla",
+            "episode": 8,
+            "synopsis":"One year after the violent eruption of the subglacial volcano Katla, the peace and tranquility in the small town of Vik is dramatically disturbed.",
+            "small_poster":"https://m.media-amazon.com/images/M/MV5BNGIyYWIzODQtMzU5Ni00YmIxLTk0YzAtOTg3ZWEwNjQ4OTQ4XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg",
+            "large_poster":"https://pbs.twimg.com/media/E4HTjSIWEAAYmaN.jpg",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          },
+          {
+            "id": 12, 
+            "title":"Superman and Lois",
+            "episode": 16,
+            "synopsis":"Follow the world's most famous super hero and comic books' most famous journalist as they deal with all the stress, pressures, and complexities that come with being working parents in today's society.",
+            "small_poster":"https://m.media-amazon.com/images/M/MV5BOTA2MDVhMWItNTYwYi00OTcyLWJjZmEtNTQ2NTAxMDQyYTQwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+            "large_poster":"https://variety.com/wp-content/uploads/2020/12/supermanandlois-suit-1-e1607554527118.jpg?w=619",
+            "rent_price":3.99,
+            "purchase_price":28.99
+          }
+    ]
+    
+}
