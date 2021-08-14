@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { 
     Button, 
     CssBaseline, 
@@ -8,6 +8,7 @@ import {
     Typography, 
     makeStyles, 
     Container } from '@material-ui/core';
+import { Movie } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,42 @@ const useStyles = makeStyles((theme) => ({
 const SignUp = () => {
   const classes = useStyles();
 
+  const [user, setUser] = useState({
+    id:"",
+    firstName:"",
+    lastName:"",
+    email:"",
+    username:"",
+    password:"",
+    role:"user"
+  })
+
+  const submitForm = (e) =>{
+    e.preventDefault()
+
+    fetch("http://localhost:5000/users",{
+      method:"POST",
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      alert(`${data.message}`)
+      setUser({
+        id:"",
+        firstName:"",
+        lastName:"",
+        email:"",
+        username:"",
+        password:"",
+        role:""
+      })
+    })
+    .catch(err=>console.log(`Error: ${err}`))
+  }
+
   return (
       <div className = {classes.root}>
             <Container component="main" maxWidth="sm" >
@@ -47,7 +84,7 @@ const SignUp = () => {
                 <Typography className = {classes.title} component="h1" variant="h5">
                 Sign Up to iFun
                 </Typography>
-                <form className={classes.form} noValidate>
+                <form action="/" method="POST" onSubmit={submitForm} className={classes.form}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
                     <TextField
@@ -58,6 +95,13 @@ const SignUp = () => {
                         label="First Name"
                         name="firstName"
                         autoComplete="fname"
+                        value={user.firstName}
+                        onChange={(event)=>{
+                          setUser({
+                            ...user,
+                            firstName:event.target.value
+                          })
+                        }}
                     />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -69,6 +113,13 @@ const SignUp = () => {
                         label="Last Name"
                         name="lastName"
                         autoComplete="lname"
+                        value={user.lastName}
+                        onChange={(event)=>{
+                          setUser({
+                            ...user,
+                            lastName:event.target.value
+                          })
+                        }}
                     />
                     </Grid>
                     <Grid item xs={12}>
@@ -80,8 +131,35 @@ const SignUp = () => {
                         label="Email Address"
                         name="email"
                         autoComplete="email"
+                        value={user.email}
+                        onChange={(event)=>{
+                          setUser({
+                            ...user,
+                            email:event.target.value
+                          })
+                        }}
                     />
                     </Grid>
+
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        id="username"
+                        label="Username"
+                        name="username"
+                        autoComplete="username"
+                        value={user.username}
+                        onChange={(event)=>{
+                          setUser({
+                            ...user,
+                            username:event.target.value
+                          })
+                        }}
+                    />
+                    </Grid>
+
                     <Grid item xs={12}>
                     <TextField
                         variant="outlined"
@@ -92,6 +170,13 @@ const SignUp = () => {
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        value={user.password}
+                        onChange={(event)=>{
+                          setUser({
+                            ...user,
+                            password:event.target.value
+                          })
+                        }}
                     />
                     </Grid>
                     

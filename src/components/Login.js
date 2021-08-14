@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { 
   Button, 
   CssBaseline, 
@@ -39,6 +39,34 @@ const useStyles = makeStyles((theme) => ({
 const  Login = () => {
   const classes = useStyles();
 
+  const [user, setUser] = useState({
+    username:"",
+    password:""
+  })
+
+  const submitForm = (e) =>{
+    e.preventDefault()
+
+    fetch("http://localhost:5000/auth",{
+      method:"POST",
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      alert(`${data.message}`)
+      setUser({
+        username:"",
+        password:""
+      })
+      
+    })
+    .catch(err=>console.log(`Error: ${err}`))
+  }
+
+
   return (
     <div className = {classes.root}>
       <Container component="main" maxWidth="sm">
@@ -49,17 +77,24 @@ const  Login = () => {
           <Typography className = {classes.title} component="h1" variant="h5">
             Login to iFun 
           </Typography>
-          <form className={classes.form} noValidate>
+          <form action="/" method="POST" onSubmit={submitForm} className={classes.form} >
             <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
+              value={user.username}
+              onChange={(event)=>{
+                setUser({
+                  ...user,
+                  username:event.target.value
+                })
+              }}
             />
             <TextField
               variant="outlined"
@@ -71,6 +106,13 @@ const  Login = () => {
               type="password"
               id="password"
               autoComplete="current-password"
+              value={user.password}
+              onChange={(event)=>{
+                setUser({
+                  ...user,
+                  password:event.target.value
+                })
+              }}
             />
             <Button
               type="submit"
@@ -78,6 +120,7 @@ const  Login = () => {
               variant="contained"
               color="primary"
               className={classes.submit}
+              href="/dashboard"
             >
               Login
             </Button>

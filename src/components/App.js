@@ -16,12 +16,16 @@ import {useState,useEffect} from 'react';
 import VideoStoreContext from '../context/VideoStoreContext';
 import Header from './Header';
 import Footer from './Footer';
+import SearchPage from '../pages/SearchPage';
 
 const App=()=> {
   const [banners, setBanners] = useState([]);
   const [movies, setMovies] = useState([]);
   const [tvs, setTVs] = useState([]);
+  const [searchItem, setSearchItem] = useState('');
 
+
+  //fake API
   useEffect(()=>{
     fetch("https://fake-server-for-movies-app.herokuapp.com/banners")
     .then((res)=>{
@@ -35,13 +39,41 @@ const App=()=> {
     })
   },[])
 
+  // useEffect(()=>{
+  //   fetch("https://fake-server-for-movies-app.herokuapp.com/movies")
+  //   .then((res)=>{
+  //     return res.json()
+  //   })
+  //   .then(json=>{    
+  //         setMovies(json);
+  //   })
+  //   .catch((err)=>{
+  //       console.log(`Error ${err}`);
+  //   })
+  // },[])
+
+
+  // useEffect(()=>{
+  //   fetch("https://fake-server-for-movies-app.herokuapp.com/TVs")
+  //   .then((res)=>{
+  //     return res.json()
+  //   })
+  //   .then(json=>{    
+  //         setTVs(json);
+  //   })
+  //   .catch((err)=>{
+  //       console.log(`Error ${err}`);
+  //   })
+  // },[])
+
+  //springboot API
   useEffect(()=>{
-    fetch("https://fake-server-for-movies-app.herokuapp.com/movies")
+    fetch("http://localhost:5000/movies")
     .then((res)=>{
       return res.json()
     })
     .then(json=>{    
-          setMovies(json);
+          setMovies(json.body);
     })
     .catch((err)=>{
         console.log(`Error ${err}`);
@@ -49,12 +81,12 @@ const App=()=> {
   },[])
 
   useEffect(()=>{
-    fetch("https://fake-server-for-movies-app.herokuapp.com/TVs")
+    fetch("http://localhost:5000/tvs")
     .then((res)=>{
       return res.json()
     })
     .then(json=>{    
-          setTVs(json);
+          setTVs(json.body);
     })
     .catch((err)=>{
         console.log(`Error ${err}`);
@@ -66,41 +98,47 @@ const App=()=> {
       <CssBaseline/>
       
       <Router>
-        <Header/>
-        <Switch>
-          <VideoStoreContext.Provider value={{banners, setBanners, movies, setMovies, tvs, setTVs}} >
+        <VideoStoreContext.Provider value={{banners, setBanners, movies, setMovies, tvs, setTVs, searchItem, setSearchItem}} >
+          <Header/>
+          <Switch>
+            
 
-          <Route exact path="/movie-list">
-            <MovieListPage />
-          </Route>
+            <Route exact path="/movie-list">
+              <MovieListPage />
+            </Route>
 
-          <Route exact path="/tv-list">
-            <TvListPage/>
-          </Route>
+            <Route exact path="/tv-list">
+              <TvListPage/>
+            </Route>
 
-          <Route path= "/movie/:id">
-            <MovieDetailPage/>
-          </Route>
+            <Route path= "/movie/:id">
+              <MovieDetailPage/>
+            </Route>
 
-          <Route path= "/tv/:id">
-            <TvDetailPage/>
-          </Route>
+            <Route path= "/tv/:id">
+              <TvDetailPage/>
+            </Route>
 
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
+            <Route path= "/search">
+              <SearchPage/>
+            </Route>
 
-          <Route exact path="/sign-up">
-            <SignUpPage />
-          </Route>
+            <Route exact path="/login">
+              <LoginPage />
+            </Route>
 
-          <Route exact path="/">
-            <HomePage />
-          </Route>
+            <Route exact path="/sign-up">
+              <SignUpPage />
+            </Route>
 
-          </VideoStoreContext.Provider>
-        </Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+
+            
+          </Switch>
         <Footer/>
+        </VideoStoreContext.Provider>
       </Router>
       
     </>

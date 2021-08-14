@@ -22,21 +22,22 @@ const useStyles = makeStyles((theme) => ({
 const FeaturedMovies = () => {
     const {movies} = useContext(VideoStoreContext);
     const classes = useStyles();
-
+  
     return (
         <Grid container className={classes.root}>
             <Typography className = {classes.title}>Featured Movies</Typography>
             <Grid className = {classes.container} container justify="center" spacing={3}>
-                {movies.slice(0,6).map((movie) => (
-                    <Grid  key={movie} item>
-                        <Link to = {`/movie/${movie.id}`}>
-                            <img width="180" height="280" src = {movie.small_poster} alt='poster'/>
+                {movies.filter(movie => movie.featured).map(filteredMovie => (
+                    <Grid  key={filteredMovie} item>
+                        <Link to = {`/movie/${filteredMovie.id}`}>
+                            <img width="180" height="280" src = {filteredMovie.small_poster} alt='poster'/>
                         </Link>
-                        
                     </Grid>
                 ))}
             </Grid>
         </Grid>
+
+
     );
 }
 

@@ -27,12 +27,11 @@ const FeaturedMovies = () => {
         <Grid container className={classes.root}>
             <Typography className = {classes.title}>Featured TV Shows</Typography>
             <Grid className = {classes.container} container justify="center" spacing={3}>
-                {tvs.slice(0,6).map((tv) => (
-                    <Grid  key={tv} item>
-                        <Link to = {`/tv/${tv.id}`}>
-                            <img width="180" height="280" src = {tv.small_poster} alt='poster' className = 'small-poster'/>
+                {tvs.filter(tv => tv.featured).map(filteredTV => (
+                    <Grid  key={filteredTV} item>
+                        <Link to = {`/tv/${filteredTV.id}`}>
+                            <img width="180" height="280" src = {filteredTV.small_poster} alt='poster'/>
                         </Link>
-                        
                     </Grid>
                 ))}
             </Grid>
