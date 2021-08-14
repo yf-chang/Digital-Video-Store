@@ -17,6 +17,7 @@ import VideoStoreContext from '../context/VideoStoreContext';
 import Header from './Header';
 import Footer from './Footer';
 import SearchPage from '../pages/SearchPage';
+import AccountPage from '../pages/AccountPage';
 
 const App=()=> {
   const [banners, setBanners] = useState([]);
@@ -130,6 +131,11 @@ const App=()=> {
             <Route exact path="/sign-up">
               <SignUpPage />
             </Route>
+
+            <Route exact path="/account">
+              <AccountPage />
+            </Route>
+
 
             <Route exact path="/">
               <HomePage />

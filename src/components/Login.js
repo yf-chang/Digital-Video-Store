@@ -8,6 +8,7 @@ import {
   Typography, 
   makeStyles, 
   Container } from '@material-ui/core';
+  import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,29 +43,51 @@ const  Login = () => {
   const [user, setUser] = useState({
     username:"",
     password:""
-  })
+  });
+  const history = useHistory();
+
+
+  // const submitForm = (e) =>{
+  //   e.preventDefault()
+
+  //   fetch("http://localhost:5000/auth",{
+  //     method:"POST",
+  //     headers:{
+  //       'Content-Type':'application/json'
+  //     },
+  //     body: JSON.stringify(user)
+  //   })
+  //   .then(res=>res.json())
+  //   .then(data=>{
+  //     alert(`${data.message}`)
+  //     setUser({
+  //       username:"",
+  //       password:""
+  //     })
+      
+      
+  //   })
+  //   .catch(err=>console.log(`Error: ${err}`))
+  // }
 
   const submitForm = (e) =>{
-    e.preventDefault()
+    e.preventDefault();
 
     fetch("http://localhost:5000/auth",{
-      method:"POST",
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body: JSON.stringify(user)
+        method: "POST", 
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(user)
     })
-    .then(res=>res.json())
-    .then(data=>{
-      alert(`${data.message}`)
-      setUser({
-        username:"",
-        password:""
-      })
-      
+    .then((res)=>{
+        if(res.ok){
+            history.push("/account");
+            sessionStorage.setItem("Auth", user.username);
+        } else {
+            alert("Email or password not valid! Please try again!");
+        }
     })
     .catch(err=>console.log(`Error: ${err}`))
-  }
+}
 
 
   return (
@@ -120,7 +143,7 @@ const  Login = () => {
               variant="contained"
               color="primary"
               className={classes.submit}
-              href="/dashboard"
+              
             >
               Login
             </Button>
