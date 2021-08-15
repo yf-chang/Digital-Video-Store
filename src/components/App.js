@@ -28,7 +28,7 @@ const App=()=> {
 
   //fake API
   useEffect(()=>{
-    fetch("https://fake-server-for-movies-app.herokuapp.com/banners")
+    fetch("https://digital-video-store-backend.herokuapp.com/banners")
     .then((res)=>{
       return res.json()
     })
@@ -40,36 +40,9 @@ const App=()=> {
     })
   },[])
 
-  // useEffect(()=>{
-  //   fetch("https://fake-server-for-movies-app.herokuapp.com/movies")
-  //   .then((res)=>{
-  //     return res.json()
-  //   })
-  //   .then(json=>{    
-  //         setMovies(json);
-  //   })
-  //   .catch((err)=>{
-  //       console.log(`Error ${err}`);
-  //   })
-  // },[])
-
-
-  // useEffect(()=>{
-  //   fetch("https://fake-server-for-movies-app.herokuapp.com/TVs")
-  //   .then((res)=>{
-  //     return res.json()
-  //   })
-  //   .then(json=>{    
-  //         setTVs(json);
-  //   })
-  //   .catch((err)=>{
-  //       console.log(`Error ${err}`);
-  //   })
-  // },[])
-
   //springboot API
   useEffect(()=>{
-    fetch("http://localhost:5000/movies")
+    fetch("https://digital-video-store-backend.herokuapp.com/movies")
     .then((res)=>{
       return res.json()
     })
@@ -82,7 +55,7 @@ const App=()=> {
   },[])
 
   useEffect(()=>{
-    fetch("http://localhost:5000/tvs")
+    fetch("https://digital-video-store-backend.herokuapp.com/tvs")
     .then((res)=>{
       return res.json()
     })

@@ -46,34 +46,10 @@ const  Login = () => {
   });
   const history = useHistory();
 
-
-  // const submitForm = (e) =>{
-  //   e.preventDefault()
-
-  //   fetch("http://localhost:5000/auth",{
-  //     method:"POST",
-  //     headers:{
-  //       'Content-Type':'application/json'
-  //     },
-  //     body: JSON.stringify(user)
-  //   })
-  //   .then(res=>res.json())
-  //   .then(data=>{
-  //     alert(`${data.message}`)
-  //     setUser({
-  //       username:"",
-  //       password:""
-  //     })
-      
-      
-  //   })
-  //   .catch(err=>console.log(`Error: ${err}`))
-  // }
-
   const submitForm = (e) =>{
     e.preventDefault();
 
-    fetch("http://localhost:5000/auth",{
+    fetch("https://digital-video-store-backend.herokuapp.com/auth",{
         method: "POST", 
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(user)

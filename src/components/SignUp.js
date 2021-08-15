@@ -53,7 +53,7 @@ const SignUp = () => {
   const submitForm = (e) =>{
     e.preventDefault()
 
-    fetch("http://localhost:5000/users",{
+    fetch("https://digital-video-store-backend.herokuapp.com/users",{
       method:"POST",
       headers:{
         'Content-Type':'application/json'

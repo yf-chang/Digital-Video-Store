@@ -4,7 +4,7 @@ const Customer = ({data}) => {
     const [users, setUsers] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/users")
+        fetch("https://digital-video-store-backend.herokuapp.com/users")
         .then((res)=>{
           return res.json()
         })
