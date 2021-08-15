@@ -33,7 +33,7 @@ const App=()=> {
       return res.json()
     })
     .then(json=>{    
-          setBanners(json);
+          setBanners(json.body);
     })
     .catch((err)=>{
         console.log(`Error ${err}`);

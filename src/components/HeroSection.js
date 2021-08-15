@@ -10,10 +10,6 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: theme.spacing(3),
       textAlign: 'center'
 
-    },
-    image: {
-
-
     }
 }));
 
