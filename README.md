@@ -5,5 +5,5 @@ It's developed using React.js, Material UI, MongoDB
 
 To use this code:
 1. download the code
-2. run npm install
-3. run npm start
+2. run **npm install**
+3. run **npm start**
