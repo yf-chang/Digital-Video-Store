@@ -22,7 +22,7 @@ const VideoCard = ({video}) => {
                     <img width="250" height="350" src = {video.small_poster} alt='poster'/>
                 </Link>
                 <Link className = {classes.title} to = {`/tv/${video.id}`}>
-                    <Typography variant = 'h6' align = 'center' >{video.title}</Typography>
+                    <Typography variant = 'body2' align = 'center' >{video.title}</Typography>
                 </Link>
             </div>
     }
@@ -33,7 +33,7 @@ const VideoCard = ({video}) => {
                     <img width="250" height="350" src = {video.small_poster} alt='poster'/>
                 </Link>
                 <Link className = {classes.title} to = {`/movie/${video.id}`}>
-                    <Typography variant = 'h6' align = 'center' >{video.title}</Typography>
+                    <Typography variant = 'body2' align = 'center' >{video.title}</Typography>
                 </Link>
             </div>
     }
