@@ -8,6 +8,7 @@ It includes:
 - Movie/TV listing page
 - Movie/TV detail page
 - Login/Sign up pages
+- Search page
 
 To use this code:
 1. download the code
